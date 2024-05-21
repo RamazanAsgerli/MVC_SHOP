@@ -1,0 +1,35 @@
+﻿@using Core.Models
+@model Person
+
+<div class="container">
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="row">
+
+
+            <div class="mb-3 col-md-4">
+
+                <label asp-for="FullName">Fullname</label>
+                <input class="form-control" asp-for="FullName">
+                <span asp-validation-for="FullName"></span>
+            </div>
+            <div class="mb-3 col-md-4">
+
+                <label asp-for="Title">Title</label>
+                <input class="form-control" asp-for="Title">
+                <span asp-validation-for="Title"></span>
+            </div>
+
+            <div class="mb-3 col-md-4">
+                <label asp-for="PhotoFile" class="form-label"> Image </label>
+                <input asp-for="PhotoFile" class="form-control">
+                <span asp-validation-for="PhotoFile" style="color:darkred"></span>
+            </div>
+
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </form>
+
+</div>
